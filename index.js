@@ -93,25 +93,25 @@ primeiraMaiuscula(string)
 
 // let arrayNums = [1,5,2,5,3,4,4,5,6,6,5,6,7,5,6,5]
 
-var entrada = [1, 2, 3, 4, 5, 2, 2, 3,3,3,3];
+var arrayNums = [1, 2, 3, 4, 5, 2, 2, 3,3,3,3];
 
-entrada.sort(); // está ordenando como crescente
+arrayNums.sort(); // está ordenando como crescente
 
-var maior = null;
-var ocorrenciasMaior = -1;
+var maior = null; // está colocando a variável "maior" para começar nulo
+var maiorOcorrencia = 0; // está colocando a variavel "ocorrenciaMaior" para começar menor que a contagem
 
-var contagem = 1;
-for ( var i = 1 ; i <= entrada.length ; i++ ) {
-  if ( i < entrada.length && entrada[i] == entrada[i-contagem] )
-    contagem++;
+var contagem = 1; // começando a contagem já com "1"
+for ( var i = 1 ; i <= arrayNums.length ; i++ ) {
+  if ( i < arrayNums.length && arrayNums[i] == arrayNums[i - contagem] ) // se o "i" for menor que o tamanho do array "arrayNums" e o index de "arrayNums" for igual ao index de "arrayNums - o valor de "contagem"
+    contagem++; // acrescenta 1 na contagem caso a condição seja verdadeira  
   
-  else if ( contagem > ocorrenciasMaior ) {
-    maior = entrada[i-1];
-    ocorrenciasMaior = contagem;
+  else if ( contagem > maiorOcorrencia ) { // caso a contagem seja maior que o "maiorOcorrencia" a variável "maior" ganha o valor da posição de "arrayNums" - 1
+    maior = arrayNums[i - 1];
+    maiorOcorrencia = contagem;
   }
 }
 console.log(maior);
-console.log(ocorrenciasMaior);
+console.log(maiorOcorrencia);
 
 
 
