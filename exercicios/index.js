@@ -1,7 +1,7 @@
 // Fazer uma função que identifica se a palavra é um palindromo
 // ex = ovo, arara
 
-let palavras = "ovo"
+let palavras = "socorramme subi noonibus em marrocos"
 
 
 let palavra = palavras.split("")
@@ -17,7 +17,7 @@ function palindromo(string) {
 }
     
 }
-// palindromo(palavra)
+palindromo(palavra)
 
 
 //1. Dado um array de números, escreva uma função que retorne a média aritmética.
@@ -91,17 +91,15 @@ primeiraMaiuscula(string)
 
 //5. Dado um array de números, escreva uma função que retorne o número que aparece mais vezes.
 
-// let arrayNums = [1,5,2,5,3,4,4,5,6,6,5,6,7,5,6,5]
-
-var arrayNums = [1, 2, 3, 4, 5, 2, 2, 3,3,3,3];
+let arrayNums = [1,5,2,5,3,4,4,5,6,6,5,6,7,5,6,5]
 
 arrayNums.sort(); // está ordenando como crescente
 
-var maior = null; // está colocando a variável "maior" para começar nulo
-var maiorOcorrencia = 0; // está colocando a variavel "ocorrenciaMaior" para começar menor que a contagem
+let maior = null; // está colocando a variável "maior" para começar nulo
+let maiorOcorrencia = 0; // está colocando a variavel "ocorrenciaMaior" para começar menor que a contagem
 
-var contagem = 1; // começando a contagem já com "1"
-for ( var i = 1 ; i <= arrayNums.length ; i++ ) {
+let contagem = 1; // começando a contagem já com "1"
+for ( let i = 1; i <= arrayNums.length; i++ ) {
   if ( i < arrayNums.length && arrayNums[i] == arrayNums[i - contagem] ) // se o "i" for menor que o tamanho do array "arrayNums" e o index de "arrayNums" for igual ao index de "arrayNums - o valor de "contagem"
     contagem++; // acrescenta 1 na contagem caso a condição seja verdadeira  
   
@@ -111,7 +109,7 @@ for ( var i = 1 ; i <= arrayNums.length ; i++ ) {
   }
 }
 console.log(maior);
-console.log(maiorOcorrencia);
+// console.log(maiorOcorrencia);
 
 
 
