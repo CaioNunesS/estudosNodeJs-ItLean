@@ -20,7 +20,7 @@ function biggerNumber(arr){
      let result = arr.sort((a,b)=>{ return b - a })
      console.log(result[0]);
 }
-// biggerNumber(nums)
+biggerNumber(nums)
 
 //3. Escreva uma função que receba um objeto e retorne a quantidade de propriedades que esse objeto possui. Exemplo:
 
@@ -35,9 +35,7 @@ let inputData = {
 
 function howManyPropsInTheObj(obj){
     let counter = 0
-    for (let prop in obj) {
-        counter++
-    }
+    for (let prop in obj) {counter++}
     console.log(inputData);
 }
 // howManyPropsInTheObj(entrada)
@@ -79,7 +77,7 @@ function receiveStrReturnObj(str) {
     console.log(obj);
 }
 
-receiveStrReturnObj("abacaxiei")
+// receiveStrReturnObj("abacaxiei")
 
 //6. Escreva uma função que receba um array de objetos e retorne um novo array contendo apenas os objetos que possuem uma determinada propriedade e valor. Exemplo:
 
