@@ -1,23 +1,20 @@
 // Fazer uma função que identifica se a palavra é um palindromo
 // ex = ovo, arara
 
-let palavras = "socorramme subi noonibus em marrocos"
+const isPalindrome = (word) => {
+    // let mid = Math.floor(word.length / 2);
 
+    // for (let i = 0; i < mid; i++) {
+    //     if (word[i] !== word[word.length - 1 - i]) {
+    //         return false;
+    //     }
+    //     return true;
+    // }
 
-let palavra = palavras.split("")
-// console.log(palavra);
-
-function palindromo(string) {
-    for (let i = 0; i < string.length; i++) {
-        if(palavra[0] == palavra[i]){
-        console.log("sim");
-        }else{
-            console.log("nao");
-        }
+    let noSpaces = word.split(' ').join('').toLowerCase();
+    return noSpaces === word.split('').reverse().join('');
 }
-    
-}
-palindromo(palavra)
+console.log(isPalindrome("ovo"));
 
 
 //1. Dado um array de números, escreva uma função que retorne a média aritmética.
@@ -55,7 +52,7 @@ function fibonnacci(param) {
     }
     // console.log(resultado);
 }
-fibonnacci(15);
+// fibonnacci(15);
 
 //3. Dado um array de números, escreva uma função que retorne o segundo maior número.
 
@@ -87,7 +84,7 @@ function primeiraMaiuscula(word) {
     // teste.join('')
     console.log(palavraM);
 }
-primeiraMaiuscula(string)
+// primeiraMaiuscula(string)
 
 //5. Dado um array de números, escreva uma função que retorne o número que aparece mais vezes.
 
@@ -108,7 +105,7 @@ for ( let i = 1; i <= arrayNums.length; i++ ) {
     maiorOcorrencia = contagem;
   }
 }
-console.log(maior);
+// console.log(maior);
 // console.log(maiorOcorrencia);
 
 

@@ -70,12 +70,16 @@ function commomBetweenArrays(arr1, arr2) {
 function receiveStrReturnObj(str) {
     let obj = {}
     for (let i = 0; i < str.length; i++) {
-        obj[i] = str[i]
+        if (str[i] in obj) {
+            obj[str[i]] += 1
+        }else{
+            obj[str[i]] = 1 
+        }
     }
     console.log(obj);
 }
 
-receiveStrReturnObj("abacaxi")
+receiveStrReturnObj("abacaxiei")
 
 //6. Escreva uma função que receba um array de objetos e retorne um novo array contendo apenas os objetos que possuem uma determinada propriedade e valor. Exemplo:
 
@@ -105,17 +109,17 @@ let object = [
     }
 ]
 
-function showArrOfObj(obj) {
+function showArrOfObj(obj, val) {
     let prop = []
        for (let i = 0; i < obj.length; i++) {
-            if (obj[i].age == 23) {
+            if (obj[i].age == val) {
                 prop.push(obj[i])
                 console.log(prop);
             }
        }
 }
 
-// showArrOfObj(object)
+// showArrOfObj(object,23)
 
 //7. Escreva uma função que receba uma string contendo parênteses e retorne true se a string contiver uma sequência válida de parênteses e false caso contrário. Exemplo:
 
