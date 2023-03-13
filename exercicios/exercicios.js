@@ -20,7 +20,7 @@ function biggerNumber(arr){
      let result = arr.sort((a,b)=>{ return b - a })
      console.log(result[0]);
 }
-biggerNumber(nums)
+// biggerNumber(nums)
 
 //3. Escreva uma função que receba um objeto e retorne a quantidade de propriedades que esse objeto possui. Exemplo:
 
@@ -150,3 +150,26 @@ function rightParentheses(str) {
 }
 
 // rightParentheses("(())()")
+
+
+//Escreva uma função que receba uma matriz de números (ou seja, um array de arrays) como parâmetro e retorne a matriz transposta (ou seja, com as linhas e colunas invertidas).
+
+//A função deve receber uma matriz de entrada (no caso, [[1, 2, 3], [4, 5, 6], [7, 8, 9]]) e retorna a matriz transposta correspondente ([[1, 4, 7], [2, 5, 8], [3, 6, 9]])
+
+let matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+// console.log(matriz[0])
+
+function returnMatrixtransposit(arr) {
+    let newMatrix = []
+    for (let i = 0; i < arr.length; i++) {
+        newMatrix[i] = []
+        for (let index = 0; index < arr[i].length; index++) {
+            newMatrix[i][index] = arr[index][i]            
+        }
+    }
+    console.log(newMatrix);
+}
+returnMatrixtransposit(matriz)
+
+
+
